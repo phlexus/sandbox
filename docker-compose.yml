@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  phlexus:
+    container_name: phlexus
+    image: phlexus
+    working_dir: /srv
+    volumes:
+      - ./repositories/phlexus:/srv:rw
+    ports:
+      - "11000:80"
+  phlexus-core:
+    container_name: phlexus-core
+    image: phlexus
+    working_dir: /srv
+    volumes:
+      - ./repositories/phlexus-core:/srv:rw
+    ports:
+      - "11001:80"
+
+networks:
+  default:
+    name: phlexus-local
