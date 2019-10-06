@@ -17,6 +17,21 @@ services:
       - ./repositories/phlexus-core:/srv:rw
     ports:
       - "11001:80"
+  phlexus-mysql:
+    container_name: phlexus-mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: phlexus
+      MYSQL_USER: phlexus
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - phlexus-db-volume:/var/lib/mysql
+    ports:
+      - "11306:3306"
+
+volumes:
+  phlexus-db-volume:
 
 networks:
   default:
