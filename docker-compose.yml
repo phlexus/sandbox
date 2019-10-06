@@ -3,7 +3,7 @@ version: '3.5'
 services:
   phlexus:
     container_name: phlexus
-    image: phlexus
+    image: phlexus/fpm-ubuntu:18.04
     working_dir: /srv
     volumes:
       - ./repositories/phlexus:/srv:rw
