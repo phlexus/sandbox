@@ -14,4 +14,5 @@ Unifying all development in single place.
     * `git clone git@github.com:phlexus/phlexus-core.git`
     * `git clone git@github.com:phlexus/phlexus-admin-module.git`
     * `git clone git@github.com:phlexus/phlexus-auth-library.git`
+    * `git clone git@github.com:phlexus/hello-world.git`
 5. `docker-compose up -d`
